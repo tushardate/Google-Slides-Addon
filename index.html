@@ -1,0 +1,127 @@
+<html>
+
+<head>
+<!-- <link rel="stylesheet" href="https://drive.google.com/uc?export=download&#038;id=1FfTZERH_WRaR9ZWdUR9XZTxhotR94ETX">*/ -->
+<link rel="stylesheet" href="https://drive.google.com/uc?export=download&id=1dsKv2ntyfJd5nCIR7fk08Lahp292-_3a">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+  <div class="container">
+  <div class="sectionWrapper span-4row">
+    <div class="section-title vCenter span-16col">Grid</div>
+    <div class="nested span-16col">
+      <label class="label span-1col tRight vCenter">Grid:</label>
+      <select id="gridStuct" class="span-15col">
+        <option value="0" selected>Columns</option>
+        <option value="1">Rows</option>
+        <option value="2">Random</option>
+      </select>
+    </div>
+    <div class="nested span-16col">
+      <label class="span-1col vCenter tRight">Gutter:</label>
+      <input type="text" value="2 px" class="span-7col input field formUnits" id="gutter" placeholder="Gutter" title="Gutter">
+
+      <label id="noOfColumnsLabel" class="label span-1col vCenter tRight randomLayoutHidden">Number:</label>
+      <input type="number" value="3" class="field span-7col randomLayoutHidden" id="noOfColumns" placeholder="Number of Columns/Rows" title="Number of Columns">
+    </div>
+
+    <div class="nested randomLayoutVisible span-16col">
+      <label class="label span-1col vCenter tRight">Random:</label>
+      <input type="number" value="15" class="span-7col field input" id="randomPercent" placeholder="Random" title="Percentage of randomness" min="0" max="99" step="1">
+      <label class="label span-1col vCenter tRight">Seed:</label>
+      <input type="number" value="30" class="span-7col field input" id="randomSeed" placeholder="Seed" title="Change seed to change layout patterns">
+    </div>
+  </div>
+
+  <div class="sectionWrapper span-2row">
+    <div class="nested span-16col">
+      <div class="nested-last span-1col">
+        <label class="label hCenter vCenter">Margins:</label>
+        <button id="run-getArea" class="button field icon hCenter vCenter" title="Get margins from selection">☉</button>
+      </div>
+      <div class="nested span-15col">
+        <div class="nested span-16col">
+          <label class="span-1col vCenter tRight label">T:</label>
+          <input type="text" value="24 px" class="span-7col field formUnits" id="topMargin" placeholder="Top Margin" title="Margin Top">
+          <label class="span-1col vCenter tRight label">L:</label>
+          <input type="text" value="24 px" class="span-7col field formUnits" id="leftMargin" placeholder="Left Margin" title="Margin Left">
+        </div>
+
+        <div class="nested span-16col">
+          <label class="span-1col vCenter tRight label">B:</label>
+          <input type="text" value="24 px" class="span-7col field formUnits" id="bottomMargin" placeholder="Bottom Margin" title="Margin Bottom">
+          <label class="span-1col vCenter tRight label">R:</label>
+          <input type="text" value="24 px" class="span-7col field formUnits" id="rightMargin" placeholder="Right Margin" title="Margin Right">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sectionWrapper">
+    <button id="run-imageTetris" class="button blue span-16col">Layout Images</button>
+  </div>
+
+  <div class="sectionWrapper span-2row">
+    <div class="section-title vCenter span-16col">Align</div>
+    <div class="nested-flexbox span-16col">
+      <button id="alignLeft" class="button iconBtn alignBtn field" title="Align Left"><img src="https://drive.google.com/uc?export=download&id=1xB5vdAzftk1o_MsFIN7uUQA6qEhVuXoE" alt=""></button>
+      <button id="alignCenter" class="button iconBtn alignBtn field" title="Align Center"><img src="https://drive.google.com/uc?export=download&id=1rxlxUEbHgbEt7UJtm7262pdS7q769b_i" alt=""></button>
+      <button id="alignRight" class="button iconBtn alignBtn field" title="Align Right"><img src="https://drive.google.com/uc?export=download&id=119h-MXkN3aH275suWNZTIBTWjgbZ8g0S" alt=""></button>
+      <div class="spacer"></div>
+      <button id="alignTop" class="button iconBtn alignBtn field" title="Align Top"><img src="https://drive.google.com/uc?export=download&id=1t7Hk0aE6s_jMpWgJY4ei_5U3S7w6q2Su" alt=""></button>
+      <button id="alignMiddle" class="button iconBtn alignBtn field" title="Align Middle"><img src="https://drive.google.com/uc?export=download&id=1FCdA1akTNC7w5MQnmX9Qle_3HgfHNiWw" alt=""></button>
+      <button id="alignBottom" class="button iconBtn alignBtn field" title="Align Bottom"><img src="https://drive.google.com/uc?export=download&id=1AB1tGfatYGkanEDI-rPSPPWkbgDb3-Z2" alt=""></button>
+
+    </div>
+  </div>
+
+  <div class="sectionWrapper span-2row">
+    <div class="section-title vCenter span-16col">Distribute</div>
+    <div class="nested span-16col">
+      <label class="label vCenter tRight">Gap:</label>
+      <input type="text" value="6 px" class="span-5col field formUnits" id="distSpacing" placeholder="Spacing" title="Spacing">
+
+      <div class="nested-last span-5col switchToggle field vCenter hCenter" title="Scale objects to equal size and add spacing">
+        <p class="">Equal</p>
+        <input type="checkbox" checked="checked" id="scaleToFitEqual" class="switch vCenter hCenter" /><label for="scaleToFitEqual" class="toggle"></label>
+
+      </div>
+
+      <div class="nested-last span-5col switchToggle vCenter hCenter field" title="Scale objects proportionately and add spacing">
+        <p class="">Proportionate</p>
+        <input type="checkbox" id="scaleToFitProp" class="switch vCenter hCenter" /><label for="scaleToFitProp" class="toggle"></label>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sectionWrapper">
+    <div class="nested-flexbox span-16col">
+      <button id="distSpaceHorizontal" class="button iconBtn distBtn field" title="Space Horizontally"><img src="https://drive.google.com/uc?export=download&id=1mRw_MgzOMp1kjncy4jG5HqosStkUBtcL" alt=""></button>
+      <button id="distSpaceVertical" class="button iconBtn distBtn field" title="Space Vertically"><img src="https://drive.google.com/uc?export=download&id=1ktZ_NF38m4CBtqbqtPLQVBvyumnpEbLf" alt=""></button>
+       <div class="spacer"></div>
+      <button id="distEvenlyHorizontal" class="button iconBtn distBtn field" title="Distribute Evenly Horizontally"><img src="https://drive.google.com/uc?export=download&id=1rzAZLE_g8K6MiXb9g6xnp8Tnmpm0sMbq" alt=""></button>
+      <button id="distEvenlyVertical" class="button iconBtn distBtn field" title="Distribute Evenly Vertically"><img src="https://drive.google.com/uc?export=download&id=1dJVrIdVEfQjngxifGfB0iwqMmkQMvuKG" alt=""></button>
+    </div>
+  </div>
+
+  <div class="sectionWrapper">
+    <button id="run-snapSelectionToGrid" class="button blue span-16col">Snap Selection</button>
+  </div>
+
+</div>
+<!-- END CONTAINER -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://drive.google.com/uc?export=download&id=1KTH0AbD20Yezw7bMF5QgPav4PF-qQ_Ao"></script>
+  <script src="js/pubsub.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/Converter.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
