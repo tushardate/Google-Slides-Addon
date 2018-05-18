@@ -43,6 +43,7 @@ var Controller = (function(model, view) {
     document.querySelector(dom.calculate).addEventListener("click", inputValTotals);
     document.querySelectorAll(dom.formInputs).forEach(function(e) {
       e.addEventListener('focus', saveLastValue)
+      console.log("updated input. This change from second computer")
     })
     document.querySelector(dom.container).addEventListener('change', updateInputs)
   }
